@@ -151,6 +151,7 @@
 		text-align: center;
 		z-index: 1;
 		padding: 10vh 10vh 10vh;
+		height: 50vh;
 
 		img {
 			padding: 1rem 0 1rem;
@@ -201,7 +202,7 @@
 
 		@include breakpoint(medium) {
 			padding: 3rem 0 0 0;
-			height: 60vh;
+			height: 40vh;
 
 			& + #header {
 				margin-top: 1rem;
@@ -210,7 +211,7 @@
 
 		@include breakpoint(small) {
 			padding: 3rem 1rem 0 1rem;
-		height: 60vh;
+		height: 40vh;
 
 
 		}
