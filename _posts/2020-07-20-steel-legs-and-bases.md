@@ -30,5 +30,5 @@ Steel legs are neat cuz they are strong, also they look cool. they can be many c
 <p style="clear:both;"></p>
 <p><a href="{{ "/images/cedar-box.jpg" | absolute_url }}" data-lightbox="structural2" data-title="Structural Steel"><z class="image right"><img src="{{ "/images/cedar-box-thumb.jpg" | absolute_url }}" alt="" /></z></a>
 <p style="clear:both;"></p>
-<p><a href="{{ "/images/pine-trap.jpg" | absolute_url }}" data-lightbox="structural2" data-title="Structural Steel"><z class="image left"><img src="{{ "/images/pine-trap-thumb.jpg" | absolute_url }}" alt="" /></z></a>The trapezoidal option is great, as it reduces toe stubbing by nearly 30%</p>
+<p><a href="{{ "/images/pine-trap.jpg" | absolute_url }}" data-lightbox="structural2" data-title="Structural Steel"><z class="image left"><img src="{{ "/images/pine-trapbase-thumb.jpg" | absolute_url }}" alt="" /></z></a>The trapezoidal option is great, as it reduces toe stubbing by nearly 30%</p>
 <p style="clear:both;"></p>
