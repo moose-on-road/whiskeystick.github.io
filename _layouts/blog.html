@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	
+
 -->
 <html>
 	<head>
@@ -15,8 +15,8 @@
 				<!-- Header -->
 				<header id="header">
 					<img src="{{"/images/logothin.svg" | absolute_url }}" alt="" class="svg" />
-					
-					
+
+
 				</header>
 
 
@@ -24,27 +24,29 @@
 					<nav id="nav">
 
             {% include nav.html %}
-						
+
 					</nav>
 
 				<!-- Main -->
 				<div id="main">
 
-          
+
 					<!-- Post -->
 					<section class="posts">
 						{% for post in site.posts %}
 						{% assign mod3 = forloop.index | modulo: 3 %}
 							<article>
 								<header>
-									
+
 									<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
 								</header>
 								<a href="{{ post.url | absolute_url }}"><z class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></z></a>
-								<p>{{ post.excerpt }}</p>
+<!--
+								 <p>{{ post.excerpt }}</p>
 								<ul class="actions">
 									<li><a href="{{ post.url | absolute_url }}" class="button">See More</a></li>
-								</ul>
+								</ul> 
+-->
 							</article>
 							{% if mod3 == 0 %}
 							{% endif %}

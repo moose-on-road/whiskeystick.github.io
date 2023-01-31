@@ -18,7 +18,7 @@
 				border-top: 0;
 			}
 		}
-		
+
 		> footer {
 			text-align: center;
 		}
@@ -70,8 +70,8 @@
 
 		> .posts {
 			@include flexgrid((
-				columns:			2,
-				gutters:			(_size(padding) * 4),
+				columns:			3, //change article children too (-n+X) X=#ofcolumns
+				gutters:			(_size(padding) * 2), //was 4
 				horizontal-align:	center,
 				vertical-align:		flex-start,
 				flush:				false
@@ -90,11 +90,11 @@
 					margin-bottom: 0;
 				}
 
-				&:nth-child(2n - 1) {
+				&:nth-child(3n - 2){
 					border-left-width: 0;
 				}
 
-				&:nth-child(-n + 2) {
+				&:nth-child(-n + 3) {
 					border-top-width: 0;
 				}
 			}
