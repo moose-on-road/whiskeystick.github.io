@@ -5,7 +5,6 @@
   <li class="{% if page.url == "/" %} active {% endif %}"><a href="{{ "/#header" | absolute_url }}">Home</a></li>
   <li class="{% if page.url contains '/process/' %} active {% endif %}"><a href="{{ "/process/" | absolute_url }}">Process</a></li>
   <li class="{% if page.url contains '/portfolio/' %} active {% endif %}"><a href="{{ "/portfolio/" | absolute_url }}">Portfolio</a></li>
+  <li class="{% if page.url contains '/cart/' %} active {% endif %}"><a href="{{ "/cart/" | absolute_url }}">Cart</a></li>
   <li class="{% if page.url contains '/nothing/' %} active {% endif %}"><a href="#footer" class="scrolly">Contact</a></li>
 </ul>
-
-
