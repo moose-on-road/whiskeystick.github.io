@@ -54,16 +54,22 @@ sitemap:
                     </tfoot>
                   </table>
                 </div>
+                <button class= "button" id="checkout-button-stripe" role="link" type="button">
+                  Checkout
+                </button>
+
+                <div id="error-message"></div>
               </div>
             </div>
 
 
-						<!-- Footer -->
-							<footer>
-                <ul class="actions">
-                  <li><a href="{{ "/process/" | absolute_url }}" class="button">Our Process</a></li>
-                  <li><a href="{{ "/portfolio/" | absolute_url }}" class="button">Our Portfolio</a></li>
-                </ul>
+
+
+                <!-- Footer -->
+    							<footer>
+                    <ul class="actions">
+                      <li><a href="{{ "/process/" | absolute_url }}" class="button">Our Process</a></li>
+                    </ul>
 							</footer>
 					</div>
 				<!-- Footer -->
@@ -79,8 +85,8 @@ sitemap:
 
 			$cart.innerHTML = items.map((item) => `
 					<tr>
-						<td>#${item.id}</td>
 						<td>${item.name}</td>
+            <td></td>
 						<td>${item.quantity}</td>
 						<td style="width: 60px;">
 							<button type="button" class="btn btn-block btn-sm btn-outline-primary"
@@ -99,6 +105,45 @@ sitemap:
 		renderCart(cartLS.list())
 		cartLS.onChange(renderCart)
 	</script>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_test_51MJl9YG47Qvg6QA2wzGrgHhhNBB1G3ztgu19d6EaaMkjWuGfHrOf4M6dYM8MpTBOSPtXQ9yiAIcZs5LjHIhiAcUg00ep05RmNz');
+
+  var checkoutButton = document.getElementById('checkout-button-stripe');
+  checkoutButton.addEventListener('click', function () {
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
+    stripe.redirectToCheckout({
+      lineItems: [{cartLS.list(:)}],
+      mode: 'payment',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: window.location.protocol + '//highlandparkfurniture.ca/success',
+      cancelUrl: window.location.protocol + '//highlandparkfurniture.ca/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+
+
+  </script>
 </body>
 
 </html>

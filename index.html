@@ -52,12 +52,12 @@ sitemap:
 <div class="card-deck mt-4 mb-4 text-center">
   <div class="card mb-4 shadow-sm">
     <div class="card-header">
-      <h4 class="my-0 font-weight-normal">Nike Air</h4>
+      <h4 class="my-0 font-weight-normal">Softwood Top</h4>
     </div>
     <div class="card-body">
-      <h1 class="card-title pricing-card-title">$100</h1>
+      <h1 class="card-title pricing-card-title">$300</h1>
       <button type="button" class="btn btn-block btn-outline-primary"
-        onClick="cartLS.add({id: 1, name: 'Nike Air', price: 100})">Add to
+        onClick="cartLS.add({id: 123456789, name: 'Softwood Top', price: 300 })">Add to
         Cart</button>
     </div>
   </div>
@@ -68,7 +68,7 @@ sitemap:
     <div class="card-body">
       <h1 class="card-title pricing-card-title">$120</h1>
       <button type="button" class="btn btn-block btn-outline-primary"
-        onClick="cartLS.add({id: 2, name: 'Adidas Superstar', price: 120})">Add to
+        onClick="cartLS.add({id: 2, name: 'Adidas Superstar', price: 120, stripe: 'hi'})">Add to
         Cart</button>
     </div>
   </div>
@@ -100,7 +100,7 @@ sitemap:
 			</div>
 		<!-- Scripts -->
 		{% include scripts-main.html %}
-    {% include tracking.html %}
+
 	</body>
 		<a href="{{ "/images/pine-trap.jpg" | absolute_url }}" data-lightbox="preview" data-title="Pecan Stained Pine Top and Matte Black Trapezoidal Base"></a>
 		<a href="{{ "/images/copper-bean-3hp.jpg" | absolute_url }}" data-lightbox="preview" data-title="Dark Grey 'Bean' with Copper Kintsugi and 3 Bar Hairpin Legs"></a>

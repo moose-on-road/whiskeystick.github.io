@@ -1,22 +1,39 @@
+---
+layout: null
+title: Highland Park Furniture Co.
+description: Custom Furniture Handmade in Calgary Alberta
+sitemap:
+    priority: 1.0
+    lastmod: 2020-08-02
+    changefreq: weekly
+---
 <!DOCTYPE html>
-<html>
+
   <head>
-    <title>Buy cool new product</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://js.stripe.com/v3/"></script>
+  {% include head.html %}
   </head>
   <body>
-    <section>
-      <div class="product">
-        <img src="https://i.imgur.com/EHyR2nP.png" alt="The cover of Stubborn Attachments" />
-        <div class="description">
-          <h3>Stubborn Attachments</h3>
-          <h5>$20.00</h5>
-        </div>
-      </div>
-      <form action="/create-checkout-session" method="POST">
-        <button type="submit" id="checkout-button">Checkout</button>
-      </form>
-    </section>
+    <div id="wrapper" class="fade-in">
+
+      <!-- Header -->
+      <header id="header">
+        <img src="{{"/images/logothin.svg" | absolute_url }}" alt="" class="svg"/>
+      </header>
+
+
+      <!-- Nav -->
+        <nav id="nav">
+          {% include nav.html %}
+        </nav>
+<div id="main">
+      <!-- Display a payment form -->
+      <form action="/pages/api/checkout_sessions" method="POST">
+          <button type="submit" role="link">
+            Checkout
+          </button>
+			</div>
+            {% include foot.html %}
+            {% include scripts-main.html %}
+</div>
   </body>
 </html>
