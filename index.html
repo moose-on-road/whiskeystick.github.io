@@ -49,24 +49,23 @@ sitemap:
 						</div>
 <p style="text-align:center; padding-top: 2rem;"><b>Head over to the Portfolio tab to view more.<br>If you're interested in ordering, check out the Process tab to see how we do things.<br>Then scroll down to the Contact section when you're ready to chat.</b></p>
 
-<div class="card-deck mt-4 mb-4 text-center">
-  <div class="card mb-4 shadow-sm">
-    <div class="card-header">
-      <h4 class="my-0 font-weight-normal">Softwood Top</h4>
-    </div>
-    <div class="card-body">
-      <h1 class="card-title pricing-card-title">$300</h1>
-      <button type="button" class="btn btn-block btn-outline-primary"
-        onClick="cartLS.add({id: 123456789, name: 'Softwood Top', price: 300 })">Add to
+<div class="softwoodtop">
+
+      <h2 id="productname"></h2>
+
+      <h2 id="productprice"></h2>
+      <noscript id="addtocart"></noscript>
+      <button type="button"
+        onClick="cartLS.add({})">Add to
         Cart</button>
-    </div>
+
   </div>
   <div class="card mb-4 shadow-sm">
     <div class="card-header">
-      <h4 class="my-0 font-weight-normal">Adidas Superstar</h4>
+      <h4 class="my-0 font-weight-normal">Hardwood Top</h4>
     </div>
     <div class="card-body">
-      <h1 class="card-title pricing-card-title">$120</h1>
+      <h1 class="card-title pricing-card-title">$350</h1>
       <button type="button" class="btn btn-block btn-outline-primary"
         onClick="cartLS.add({id: 2, name: 'Adidas Superstar', price: 120, stripe: 'hi'})">Add to
         Cart</button>
@@ -83,7 +82,7 @@ sitemap:
         Cart</button>
     </div>
   </div>
-</div>
+
 
 
 
@@ -100,6 +99,7 @@ sitemap:
 			</div>
 		<!-- Scripts -->
 		{% include scripts-main.html %}
+    <script src="{{ "/assets/js/products.js" | absolute_url }}"></script>
 
 	</body>
 		<a href="{{ "/images/pine-trap.jpg" | absolute_url }}" data-lightbox="preview" data-title="Pecan Stained Pine Top and Matte Black Trapezoidal Base"></a>

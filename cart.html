@@ -77,7 +77,8 @@ sitemap:
 			</div>
 		<!-- Scripts -->
 		{% include scripts-main.html %}
-    {% include tracking.html %}
+    <script src="{{ "/assets/js/productlist.js" | absolute_url }}"></script>
+
     <script>
 		function renderCart(items) {
 			const $cart = document.querySelector(".cart")
@@ -117,7 +118,7 @@ sitemap:
      * them to Checkout.
      */
     stripe.redirectToCheckout({
-      lineItems: [{cartLS.list(:)}],
+      lineItems: [{price: 'price_1MXfzXG47Qvg6QA2AfHSOQE3', quantity: 1}, {price: 'price_1MYDyoG47Qvg6QA2phNIxwsr', quantity: 2}],
       mode: 'payment',
       /*
        * Do not rely on the redirect to the successUrl for fulfilling
