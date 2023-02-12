@@ -42,6 +42,7 @@ sitemap:
 
 				<!-- Main -->
 					<div id="main">
+            <div id="snackbar">Item added to cart</div>
 					<div style="padding: .5rem 0 .5rem">
 						<a href="{{ "/images/squarepin.jpg" | absolute_url }}" data-lightbox="preview" data-title="Medium Grey Slab with White Kintsugi and Hammered Black Squarepin Legs">
 							<z class="image prev"><img src="{{ "/images/squarepin-prev.jpg" | absolute_url }}"/></z>
@@ -56,7 +57,7 @@ sitemap:
       <h2 id="productprice"></h2>
       <noscript id="addtocart"></noscript>
       <button type="button"
-        onClick="cartLS.add({})">Add to
+        onClick="snackBar(); cartLS.add({id: 'price_1MXfzXG47Qvg6QA2AfHSOQE3', name: 'Softwood Top', price: 300})">Add to
         Cart</button>
 
   </div>
@@ -67,9 +68,10 @@ sitemap:
     <div class="card-body">
       <h1 class="card-title pricing-card-title">$350</h1>
       <button type="button" class="btn btn-block btn-outline-primary"
-        onClick="cartLS.add({id: 2, name: 'Adidas Superstar', price: 120, stripe: 'hi'})">Add to
-        Cart</button>
+        onClick="snackBar(); cartLS.add({id: 'price_1MYDxlG47Qvg6QA2GxxzUwBG', name: 'Hardwood Top', price: 350})"
+        >Add to Cart</button>
     </div>
+
   </div>
   <div class="card mb-4 shadow-sm">
     <div class="card-header">

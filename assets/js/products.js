@@ -19,8 +19,8 @@ const softwoodtop = new Map([
 
  ["id", 1],
  ["name", 'Softwood Top'],
- ["price", 300],
- ["stripeid", 'price_1MXfzXG47Qvg6QA2AfHSOQE3'],
+ ["retail", 300],
+ ["price", 'price_1MXfzXG47Qvg6QA2AfHSOQE3'],
  ["desc", 'Pine, 22" x 36:", Pecan Stain'],
 ]);
 
@@ -31,10 +31,15 @@ document.getElementById("productname").innerHTML =
 softwoodtop.get("name");
 
 document.getElementById("productprice").innerHTML =
-"$" +softwoodtop.get("price");
+"$" +softwoodtop.get("retail");
 
 document.getElementById("addtocart").innerHTML =
 softwoodtop.get("id")
 + "," + softwoodtop.get("name")
++ "," + softwoodtop.get("retail")
 + "," + softwoodtop.get("price")
-+ "," + softwoodtop.get("stripeid")
+
+const softwoodtopATC = softwoodtop.get("id")
++ "," + softwoodtop.get("name")
++ "," + softwoodtop.get("retail")
++ "," + softwoodtop.get("price")
