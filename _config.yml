@@ -3,7 +3,7 @@ title:             Whiskey Stick Furniture Co.
 bio:                'Custom Furniture Handmade in Calgary, Alberta'
 description:        "locally made in calgary, alberta. Custom woodworking shop that does welding, furniture fabricating, custom tables, coffee tables, stone work, carpentry, and furniture making."
 locale:             en_US
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/whiskeystick.github.io" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 # Comments
